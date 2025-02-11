@@ -94,4 +94,3 @@ Code for evaluating the model on the GMTKN55 dataset.
 
 For further details on model implementation or dataset processing, refer to the accompanying paper.  
 **Note**: Ensure all dependencies and environment configurations are properly set before execution.
-``` 
