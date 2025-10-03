@@ -10,7 +10,7 @@ basis = "def2tzvpd"
 mindiv = 1e-10
 
 def input_files(path, num_list, ene_file, obj_list, nelec_list, grids_list, tot_ene_list, file_name):
-    spin = pd.DataFrame([],columns=['spin'])
+    spin = pd.DataFrame([],columns=['spin'], dtype=object)
     spin['spin'] = np.loadtxt(path + 'multi-file', dtype = int) - 1
     tot_ene = pd.read_csv(ene_file, sep = '\t', header = None, usecols = [7], names = ['e_tot'])
     dist = natsorted(listdir(path), alg=ns.PATH)
