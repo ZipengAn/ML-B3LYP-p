@@ -10,7 +10,7 @@ basis = "def2tzvpd"
 mindiv = 1e-10
 
 def input_files(path, obj_list, mol_name_list, grids_list, file_name, obj_limit = None):
-    mol_data = pd.DataFrame([],columns=['charge', 'spin'])
+    mol_data = pd.DataFrame([],columns=['charge', 'spin'], dtype=object)
     mol_data['charge'] = np.loadtxt(path + 'charge-file', dtype = int)
     mol_data['spin'] = np.loadtxt(path + 'multi-file', dtype = int) - 1
     dist = natsorted(listdir(path), alg=ns.PATH)
